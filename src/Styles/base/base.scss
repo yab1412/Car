@@ -1,0 +1,50 @@
+body {
+   margin: 0;
+  height: 100vh;
+  width: 100vw; 
+  background-color: #fff;
+  color: #1b1b1b;
+  overflow-x: hidden;
+  --base: 24rem;
+
+  --primary-color: #1ECB15;
+  --primary-color-rgb: 120, 202, 92;
+  --secondary-color: #179510;
+  --secondary-color-rgb: 23, 149, 16;
+
+  // Scroll bar
+  ::-webkit-scrollbar {
+    height: 0;
+    width: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
+
+  /* Optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+    background: #eee;
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  // Scroll bar
+  ::-webkit-scrollbar {
+    height: 0;
+    width: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
+
+  /* Optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+    background: #eee;
+  }
+}

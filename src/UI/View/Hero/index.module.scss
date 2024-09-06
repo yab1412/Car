@@ -1,0 +1,259 @@
+@import "../../../Styles/minxins/respond.scss";
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+}
+
+.parallaxSection {
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130vh;
+  overflow: hidden;
+
+  @include respond(phone) {
+    height: 100%;
+  }
+
+   @include respond(tab-port) {
+    height: 100%;
+  }
+}
+
+.parallaxBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../public/assets/Hero.png");
+  background-size: 100% auto;
+  background-attachment: scroll;
+  transform: translateZ(0) scale(1.5);
+
+  @include respond(phone) {
+    background-size: auto;
+  }
+
+    @include respond(tab-port) {
+    background-size: auto;
+  }
+}
+
+.content {
+  z-index: 1;
+  padding: 0 15%;
+  display: flex;
+  flex-direction: column;
+
+  @include respond(phone) {
+    padding: 10rem;
+  }
+
+   @include respond(tab-port) {
+    padding: 10rem;
+  }
+}
+
+.head {
+  display: flex;
+  margin-bottom: 2rem;
+
+  & h2 {
+    font-size: 2.4rem;
+  }
+
+  @include respond(phone) {
+    font-size: 1.6rem;
+    font-weight: 400;
+    flex-direction: column;
+  }
+
+    @include respond(tab-port) {
+    font-size: 1.6rem;
+    font-weight: 400;
+    flex-direction: column;
+  }
+}
+
+.data {
+  padding: 5rem;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+  
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list {
+  display: flex;
+  gap: 2rem;
+
+  @include respond(phone) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+}
+
+.carTypes {
+  background-color: rgba(0, 68, 255, 0.651);
+  padding: 2rem;
+  border-radius: 1rem;
+
+  & h3 {
+    font-size: 1.6rem;
+    border-radius: 5%;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.place {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+
+.inputs {
+  display: flex;
+
+  & input {
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+
+.time {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.submit {
+  & button {
+    width: fit-content;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: rgba(0, 68, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+
+.descriptions {
+  margin-top: 5rem;
+  color: #fff;
+  display: flex;
+  gap: 1rem;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+
+    @include respond(tab-port) {
+    flex-direction: column;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+}
+
+
+.title {
+    display: flex;
+    align-items: center;
+
+    & .line {
+      background-color: rgba(0, 68, 255, 0.651);
+      width: 100%;
+      height: 1px;
+
+      @include respond(phone) {
+        // width: 1px;
+        // height: 100%;
+      }
+    }
+
+    & h3 {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: bold;
+      background-color: rgba(0, 68, 255, 0.651);
+      width: fit-content;
+      border-radius: 5px;
+      padding: 5% 7%;
+    }
+  }
+
+.ContentDiscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  & h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  & p {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,185 @@
+@import "../../../Styles/minxins/respond.scss";
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  margin-top: 5rem;
+}
+
+.title {
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  & h4 {
+    font-size: 1.4rem;
+    color: rgba(0, 68, 255, 0.651);
+    background-color: rgb(128, 128, 128, 0.6);
+    padding: 1rem;
+    border-radius: 5%;
+  }
+
+  & h1 {
+    font-size: 2.6rem;
+  }
+}
+
+.content {
+}
+
+.news {
+  margin: 2rem;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: center;
+    gap: 15rem;
+    padding: 2rem 0;
+    margin: 0;
+  }
+
+    @include respond(tab-port) {
+    flex-direction: column;
+    align-items: center;
+    gap: 15rem;
+    padding: 2rem 0;
+    margin: 0;
+  }
+}
+
+.item {
+  flex: 1;
+}
+
+.image {
+  position: relative;
+
+  & img {
+    border-radius: 1rem;
+  }
+}
+
+.contentDiscription {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  bottom: -30%;
+  margin: 1rem;
+  border-bottom: 0.3rem solid rgba(0, 68, 255, 0.8);
+  background-color: #fff;
+  border-radius: 1rem;
+  transition: transform 0.5s ease-in-out;
+  padding: 2rem 5rem;
+
+  & h2 {
+    font-size: 2rem;
+  }
+
+  & p {
+    font-size: 1.4rem;
+  }
+
+  & button {
+    width: fit-content;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: rgba(0, 68, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+
+.date {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 68, 255, 0.651);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.testimony {
+  margin-top: 20rem;
+  display: flex;
+
+  @include respond(phone) {
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+  }
+}
+
+.testimonyItem {
+  flex: 1;
+  margin: 0.5rem;
+}
+
+.testimonyImage {
+  position: relative;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+  }
+
+  & img:hover {
+    transform: scale(1.01);
+    transition: transform 0.5s ease-in-out;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 5%;
+  left: 80%;
+}
+
+.testimonyContent {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  top: 10%;
+  margin: 1rem;
+  border-radius: 1rem;
+  color: #fff;
+  padding: 2rem 5rem;
+
+  & h2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+  }
+
+  & h3 {
+    font-size: 1.6rem;
+  }
+
+  & p {
+    font-size: 1.4rem;
+  }
+}
+
+.line {
+  background-color: #fff;
+  width: 20%;
+  height: 1px;
+}

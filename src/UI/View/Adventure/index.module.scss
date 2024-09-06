@@ -1,0 +1,124 @@
+@import "../../../Styles/minxins/respond.scss";
+
+.container {
+  margin-top: 5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+}
+
+// ParallaxSection.module.scss
+.parallaxSection {
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  // Center the content horizontally and vertically
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  overflow: hidden;
+
+  @include respond (phone) {
+    height: 100%;
+  }
+
+   @include respond (tab-port) {
+    height: 100%;
+  }
+}
+
+.parallaxBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../public/assets/chill.jpeg");
+  background-size: auto;
+  //   background-position: 50% calc(50% + 20px);
+  background-attachment: scroll;
+  transform: translateZ(0) scale(1);
+  filter: brightness(0.5);
+}
+
+.general {
+  position: relative;
+  z-index: 1;
+  padding: 0 15%;
+
+  @include respond (phone) {
+    padding: 10%;
+  }
+
+    @include respond (tab-port) {
+    padding: 10%;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 2fr;
+  gap: 2rem;
+  align-items: center;
+
+  @include respond (phone) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+   @include respond (tab-port) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+
+  & h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+  }
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.icon {
+  background-color: rgba(0, 68, 255, 0.651);
+  padding: 2%;
+  border-radius: 1rem;
+  width: fit-content;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #fff;
+  justify-content: center;
+
+  & h3 {
+    font-size: 2rem;
+
+  }
+
+  & p {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,85 @@
+@import "../../../Styles/minxins/respond.scss";
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  margin-top: 5rem;
+}
+
+.title {
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  & h4 {
+    font-size: 1.4rem;
+    color: rgba(0, 68, 255, 0.651);
+    background-color: rgb(128, 128, 128, 0.6);
+    padding: 1rem;
+    border-radius: 5%;
+  }
+
+  & h1 {
+    font-size: 2.6rem;
+  }
+}
+
+.content {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+
+  & img {
+    width: 100%;
+  }
+
+  @include respond (phone) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+    @include respond (tab-port) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.item {
+}
+
+.featureItem {
+  display: flex;
+  gap: 2rem;
+}
+
+.featureIcon {
+    padding: 2%;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1rem;
+    background-color: rgba(0, 68, 255, 0.651);
+}
+
+.featureDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    font-size: 1.4rem;
+}

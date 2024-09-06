@@ -1,0 +1,166 @@
+@import "../../../Styles/minxins/respond.scss";
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main {
+  margin-top: 5rem;
+  position: relative;
+}
+
+.title {
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+
+  & h4 {
+    font-size: 1.4rem;
+    color: rgba(0, 68, 255, 0.651);
+    background-color: rgb(128, 128, 128, 0.6);
+    padding: 1rem;
+    border-radius: 5%;
+  }
+
+  & h1 {
+    font-size: 2.6rem;
+  }
+
+  & p {
+    font-size: 1.6rem;
+    width: 40%;
+
+    @include respond (phone) {
+      width: 80%;
+    }
+  }
+}
+
+.cardContainer {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease-in-out;
+  cursor:grab ;
+  width: 1000000px;
+}
+
+.card {
+  flex-shrink: 0;
+  width: 400px;
+  height: 500px;
+  margin: 10px;
+  border-radius: 1rem;
+
+  // color: #fff;
+  // background-color: #000;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cardImage {
+  padding: 1rem;
+
+  & img {
+    border: 1px solid rgb(255, 255, 255, 0.4);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    // height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  justify-content: space-around;
+
+  & h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+.contentDiscription {
+  display: flex;
+  gap: 2rem;
+
+  & p {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.4rem;
+  }
+}
+
+.line {
+  background-color: rgba(0, 68, 255, 0.651);
+  width: 100%;
+  height: 1px;
+}
+
+.rent {
+  display: flex;
+  gap: 2rem;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.buttons button {
+  background-color: rgba(0, 68, 255, 0.651);
+  border: none;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  & h3 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  & p {
+    font-size: 2.4rem;
+  }
+}
+
+.button {
+}
+
+.Leftbutton {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5rem;
+  position: absolute;
+  left: 0;
+  bottom: 35%;
+  cursor: pointer;
+}
+
+.Rightbutton {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5rem;
+  position: absolute;
+  right: 0;
+  bottom: 35%;
+  cursor: pointer;
+}
