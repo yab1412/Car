@@ -25,6 +25,10 @@
   @include respond(tab-port) {
     height: 100%;
   }
+
+    @include respond(bigScreen) {
+    height: 50vh;
+  }
 }
 
 .parallaxBackground {

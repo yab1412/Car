@@ -21,12 +21,16 @@
   height: 60vh;
   overflow: hidden;
 
-  @include respond (phone) {
+  @include respond(phone) {
     height: 100%;
   }
 
-   @include respond (tab-port) {
+  @include respond(tab-port) {
     height: 100%;
+  }
+
+  @include respond(bigScreen) {
+    height: 50vh;
   }
 }
 
@@ -37,8 +41,8 @@
   width: 100%;
   height: 100%;
   background-image: url("../../../../public/assets/chill.jpeg");
-  background-size: auto;
-  //   background-position: 50% calc(50% + 20px);
+  background-size: 100% auto;
+  // background-position: 100% calc(50% + 20px);
   background-attachment: scroll;
   transform: translateZ(0) scale(1);
   filter: brightness(0.5);
@@ -49,11 +53,11 @@
   z-index: 1;
   padding: 0 15%;
 
-  @include respond (phone) {
+  @include respond(phone) {
     padding: 10%;
   }
 
-    @include respond (tab-port) {
+  @include respond(tab-port) {
     padding: 10%;
   }
 }
@@ -64,7 +68,7 @@
   gap: 2rem;
   align-items: center;
 
-  @include respond (phone) {
+  @include respond(phone) {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -72,7 +76,7 @@
     justify-content: center;
   }
 
-   @include respond (tab-port) {
+  @include respond(tab-port) {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -115,7 +119,6 @@
 
   & h3 {
     font-size: 2rem;
-
   }
 
   & p {
