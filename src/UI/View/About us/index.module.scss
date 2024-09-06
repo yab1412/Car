@@ -34,12 +34,13 @@
 .content {
   margin: 2rem;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   gap: 2rem;
   padding: 2rem;
 
   & img {
     width: 100%;
+    object-fit: contain;
   }
 
   @include respond (phone) {

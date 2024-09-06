@@ -69,7 +69,7 @@ export const About = () => {
               ))}
             </div>
           </div>
-          <Image src={"/assets/Hero.png"} alt="" width={1000} height={400} />
+          <Image src={"/assets/car-2.png"} alt="" width={1000} height={400} />
           <div className={style.description}>
             <div className={style.item}>
               {features.slice(2, 3).map((feature, key) => (
