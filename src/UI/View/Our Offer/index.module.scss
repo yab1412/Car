@@ -103,6 +103,7 @@
   margin-top: 5rem;
   display: flex;
   gap: 2rem;
+  justify-content: center;
   color: rgba(0, 68, 255, 0.651);
 
   @include respond(phone) {
