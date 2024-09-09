@@ -8,6 +8,14 @@
 .main {
   margin-top: 0;
   margin: 5rem;
+
+  @include respond(phone) {
+    margin: 2rem;
+  }
+
+    @include respond(tab-port) {
+    margin: 2rem;
+  }
 }
 
 .parallaxSection {
@@ -45,6 +53,7 @@
 
   @include respond(phone) {
     background-size: auto;
+    // border-radius: 0;
   }
 
   @include respond(tab-port) {
@@ -59,7 +68,7 @@
   flex-direction: column;
 
   @include respond(phone) {
-    padding: 10rem;
+    padding: 10rem 0;
   }
 
   @include respond(tab-port) {
