@@ -96,9 +96,7 @@ export const Inspiration = () => {
             }}
           >
             <h2>{inspiration.title}</h2>
-            <inspiration.icon size={50}
-              color="rgba(0, 68, 255, 0.651)"
-            />
+            <inspiration.icon size={50} color="#FFEA00" />
           </div>
         ))}
       </div>

@@ -65,7 +65,7 @@ export const Hero = () => {
           <Gutter className={style.content}>
             <div className={style.head}>
               <h2>Looking for a </h2>
-              <h2 style={{ color: "rgba(0, 68, 255, 0.651)" }}>vehicle?</h2>
+              <h2 style={{ color: "#FFEA00" }}>vehicle?</h2>
               <h2> You&apos;re at the right place.</h2>
             </div>
             <div className={style.data}>
@@ -80,7 +80,7 @@ export const Hero = () => {
                   ].map((item) => (
                     <div key={item.id}>
                       <div className={style.carTypes}>
-                        <item.icon color="#fff" size={50} />
+                        <item.icon color="rgba(0, 68, 255, 0.651)" size={50} />
                         <h3>{item.label}</h3>
                       </div>
                     </div>
@@ -126,7 +126,11 @@ export const Hero = () => {
                 </form>
               </div>
             </div>
-            <div className={style.descriptions}>
+          </Gutter>
+        </section>
+
+        <Gutter>
+          <div className={style.descriptions}>
               {descriptions.map((item, index) => (
                 <div key={index} className={style.description}>
                   <div className={style.title}>
@@ -140,8 +144,7 @@ export const Hero = () => {
                 </div>
               ))}
             </div>
-          </Gutter>
-        </section>
+        </Gutter>
       </div>
     </div>
   );
