@@ -156,13 +156,13 @@ export const About = () => {
                     ].join("")}
                   >
                     <div className={style.featureItem}>
-                      <span className={style.featureIcon}>
-                        <feature.icon />
-                      </span>
                       <div className={style.featureDescription}>
                         <h2>{feature.title}</h2>
                         <p> {feature.description}</p>
                       </div>
+                      <span className={style.featureIcon}>
+                        <feature.icon />
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -186,13 +186,13 @@ export const About = () => {
                     ].join("")}
                   >
                     <div className={style.featureItem}>
-                      <span className={style.featureIcon}>
-                        <feature.icon />
-                      </span>
                       <div className={style.featureDescription}>
                         <h2>{feature.title}</h2>
                         <p> {feature.description}</p>
                       </div>
+                      <span className={style.featureIcon}>
+                        <feature.icon />
+                      </span>
                     </div>
                   </div>
                 </div>
