@@ -106,7 +106,15 @@ export const Our_Offer = () => {
                   isVisible ? style.contentView1 : null,
                 ].join("")}
               >
-                <Counter title="Completed Orders" maxCount={15425} />
+                <div
+                  ref={view}
+                  className={[
+                    style.itemContent,
+                    isVisible ? style.viwers : null,
+                  ].join("")}
+                >
+                  <Counter title="Completed Orders" maxCount={15425} />
+                </div>
               </div>
               <div
                 ref={view}
@@ -115,7 +123,15 @@ export const Our_Offer = () => {
                   isVisible ? style.contentView2 : null,
                 ].join("")}
               >
-                <Counter title="Happy Customers" maxCount={8745} />
+                <div
+                  ref={view}
+                  className={[
+                    style.itemContent,
+                    isVisible ? style.viwers : null,
+                  ].join("")}
+                >
+                  <Counter title="Happy Customers" maxCount={8745} />
+                </div>
               </div>
               <div
                 ref={view}
@@ -124,7 +140,15 @@ export const Our_Offer = () => {
                   isVisible ? style.contentView3 : null,
                 ].join("")}
               >
-                <Counter title="Vehicles Fleet" maxCount={235} />
+                <div
+                  ref={view}
+                  className={[
+                    style.itemContent,
+                    isVisible ? style.viwers : null,
+                  ].join("")}
+                >
+                  <Counter title="Vehicles Fleet" maxCount={235} />
+                </div>
               </div>
               <div
                 ref={view}
@@ -133,7 +157,15 @@ export const Our_Offer = () => {
                   isVisible ? style.contentView4 : null,
                 ].join("")}
               >
-                <Counter title="Years" maxCount={15} />
+                <div
+                  ref={view}
+                  className={[
+                    style.itemContent,
+                    isVisible ? style.viwers : null,
+                  ].join("")}
+                >
+                  <Counter title="Years" maxCount={15} />
+                </div>
               </div>
             </div>
           </Gutter>

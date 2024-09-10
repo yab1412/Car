@@ -59,7 +59,7 @@ export const About = () => {
 
   return (
     <Gutter className={style.container}>
-      <div className={style.main}>
+      <div id="about" className={style.main}>
         <div className={style.title}>
           <div className={style.head}>
             <h4>Why Choose Us?</h4>

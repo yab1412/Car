@@ -1,5 +1,3 @@
-
-
 .container {
   width: 100%;
   height: 100%;
@@ -78,16 +76,33 @@
   }
 
   grid-column: 1 / -1;
-  display: grid; // Add this line
-  grid-template-columns: 1fr;
-}
-
-.show {
-  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr;
 }
 
-.hide {
-  display: none;
+
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid #FFEA00;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #FFEA00;
+  }
 }

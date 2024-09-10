@@ -118,7 +118,7 @@
 
 
 .item {
-    opacity: 0;
+
 }
 
 .contentView1 {
@@ -145,5 +145,25 @@
   to {
     opacity: 1;
     transform: translateY(0%);
+  }
+}
+
+.itemContent {
+  opacity: 0;
+}
+
+.viwers {
+  animation: view 1s 1s linear forwards;
+}
+
+@keyframes view {
+  0% {
+opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
