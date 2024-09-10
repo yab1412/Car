@@ -43,13 +43,13 @@
     object-fit: contain;
   }
 
-  @include respond (phone) {
+  @include respond(phone) {
     display: flex;
     flex-direction: column;
     padding: 0 1rem;
   }
 
-    @include respond (tab-port) {
+  @include respond(tab-port) {
     display: flex;
     flex-direction: column;
     padding: 0 1rem;
@@ -71,16 +71,78 @@
 }
 
 .featureIcon {
-    padding: 2%;
-    width: fit-content;
-    height: fit-content;
-    border-radius: 1rem;
-    background-color: rgba(0, 68, 255, 0.651);
+  padding: 2%;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 1rem;
+  background-color: rgba(0, 68, 255, 0.651);
 }
 
 .featureDescription {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  font-size: 1.4rem;
+
+  & p {
+    font-size: 1.6rem;
+  }
 }
+
+.featureContent {
+
+}
+
+.contentView1 {
+  animation: lefts 1s 0.2s linear forwards;
+
+}
+
+.contentView2 {
+  animation: lefts 1.2s 0.4s linear forwards;
+}
+
+.contentView3 {
+  animation: rights 1.6s 0.6s linear forwards;
+}
+
+.contentView4 {
+  animation: rights 1.8s 0.8s linear forwards;
+}
+
+@keyframes rights {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes lefts {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.contentView {
+    scale: 1;
+  animation: scales 1s 0.5s linear forwards;
+   animation-timeline: view();
+  animation-range: contain;
+}
+
+@keyframes scales {
+  to {
+    scale: 0.8;
+  }
+}
+

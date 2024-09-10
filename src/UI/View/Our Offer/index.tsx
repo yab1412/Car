@@ -41,7 +41,7 @@ export const Our_Offer = () => {
                 <h2>We offer customers a wide range of </h2>
                 <h2
                   style={{
-                    color: "rgba(0, 68, 255, 0.651)",
+                    color: "#FFEA00",
                     marginLeft: "5px",
                     marginRight: "5px",
                   }}
@@ -51,7 +51,7 @@ export const Our_Offer = () => {
                 <h2> and</h2>
                 <h2
                   style={{
-                    color: "rgba(0, 68, 255, 0.651)",
+                    color: "#FFEA00",
                     marginLeft: "5px",
                     marginRight: "5px",
                   }}

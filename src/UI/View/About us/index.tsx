@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
 import style from "./index.module.scss";
 import { Gutter } from "@/UI/Components/Gutter";
 import Image from "next/image";
@@ -26,11 +28,35 @@ const features = [
   {
     title: "Free Pick-Up & Drop-Off",
     icon: Icons.Location,
-    description: "Enjoy free pickup and drop-off services, adding an extra layer of ease to your car rental experience.",
+    description:
+      "Enjoy free pickup and drop-off services, adding an extra layer of ease to your car rental experience.",
   },
 ];
 
 export const About = () => {
+  const view = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        setIsVisible(entry.isIntersecting);
+      }
+    });
+
+    const currentView = view.current;
+    if (currentView) {
+      observer.observe(currentView);
+    }
+
+    return () => {
+      if (currentView) {
+        observer.unobserve(currentView);
+      }
+    };
+  });
+
   return (
     <Gutter className={style.container}>
       <div className={style.main}>
@@ -44,55 +70,93 @@ export const About = () => {
           <div className={style.description}>
             <div className={style.item}>
               {features.slice(0, 1).map((feature, key) => (
-                <div key={key} className={style.featureItem}>
-                  <span className={style.featureIcon}>
-                    <feature.icon />
-                  </span>
-                  <div className={style.featureDescription}>
-                    <h2>{feature.title}</h2>
-                    <p> {feature.description}</p>
+                <div
+                  key={key}
+                  ref={view}
+                  className={[
+                    style.featureContent,
+                    isVisible ? style.contentView1 : null,
+                  ].join("")}
+                >
+                  <div className={style.featureItem}>
+                    <span className={style.featureIcon}>
+                      <feature.icon />
+                    </span>
+                    <div className={style.featureDescription}>
+                      <h2>{feature.title}</h2>
+                      <p> {feature.description}</p>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
             <div className={style.item}>
               {features.slice(1, 2).map((feature, key) => (
-                <div key={key} className={style.featureItem}>
-                  <div className={style.featureIcon}>
-                    <feature.icon />
-                  </div>
-                  <div className={style.featureDescription}>
-                    <h2>{feature.title}</h2>
-                    <p> {feature.description}</p>
+                <div
+                  key={key}
+                  ref={view}
+                  className={[
+                    style.featureContent,
+                    isVisible ? style.contentView2 : null,
+                  ].join("")}
+                >
+                  <div className={style.featureItem}>
+                    <span className={style.featureIcon}>
+                      <feature.icon />
+                    </span>
+                    <div className={style.featureDescription}>
+                      <h2>{feature.title}</h2>
+                      <p> {feature.description}</p>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+          <div ref={view} className= {[style.image, isVisible ? style.contentView : null].join('')}>
           <Image src={"/assets/car-2.png"} alt="" width={1000} height={400} />
+          </div>
           <div className={style.description}>
             <div className={style.item}>
               {features.slice(2, 3).map((feature, key) => (
-                <div key={key} className={style.featureItem}>
-                  <div className={style.featureIcon}>
-                    <feature.icon />
-                  </div>
-                  <div className={style.featureDescription}>
-                    <h2>{feature.title}</h2>
-                    <p> {feature.description}</p>
+                <div
+                  key={key}
+                  ref={view}
+                  className={[
+                    style.featureContent,
+                    isVisible ? style.contentView3 : null,
+                  ].join("")}
+                >
+                  <div className={style.featureItem}>
+                    <span className={style.featureIcon}>
+                      <feature.icon />
+                    </span>
+                    <div className={style.featureDescription}>
+                      <h2>{feature.title}</h2>
+                      <p> {feature.description}</p>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
             <div className={style.item}>
               {features.slice(3, 4).map((feature, key) => (
-                <div key={key} className={style.featureItem}>
-                  <div className={style.featureIcon}>
-                    <feature.icon />
-                  </div>
-                  <div className={style.featureDescription}>
-                    <h2>{feature.title}</h2>
-                    <p> {feature.description}</p>
+                <div
+                  key={key}
+                  ref={view}
+                  className={[
+                    style.featureContent,
+                    isVisible ? style.contentView4 : null,
+                  ].join("")}
+                >
+                  <div className={style.featureItem}>
+                    <span className={style.featureIcon}>
+                      <feature.icon />
+                    </span>
+                    <div className={style.featureDescription}>
+                      <h2>{feature.title}</h2>
+                      <p> {feature.description}</p>
+                    </div>
                   </div>
                 </div>
               ))}
