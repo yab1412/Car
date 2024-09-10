@@ -151,3 +151,23 @@
     scale: 0.8;
   }
 }
+
+.features {
+  opacity: 0;
+}
+
+.viwers {
+  animation: view 1s 1s linear forwards;
+}
+
+@keyframes view {
+  0% {
+opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

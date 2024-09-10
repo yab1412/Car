@@ -78,13 +78,21 @@ export const About = () => {
                     isVisible ? style.contentView1 : null,
                   ].join("")}
                 >
-                  <div className={style.featureItem}>
-                    <span className={style.featureIcon}>
-                      <feature.icon />
-                    </span>
-                    <div className={style.featureDescription}>
-                      <h2>{feature.title}</h2>
-                      <p> {feature.description}</p>
+                  <div
+                    ref={view}
+                    className={[
+                      style.features,
+                      isVisible ? style.viwers : null,
+                    ].join("")}
+                  >
+                    <div className={style.featureItem}>
+                      <span className={style.featureIcon}>
+                        <feature.icon />
+                      </span>
+                      <div className={style.featureDescription}>
+                        <h2>{feature.title}</h2>
+                        <p> {feature.description}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -100,13 +108,21 @@ export const About = () => {
                     isVisible ? style.contentView2 : null,
                   ].join("")}
                 >
-                  <div className={style.featureItem}>
-                    <span className={style.featureIcon}>
-                      <feature.icon />
-                    </span>
-                    <div className={style.featureDescription}>
-                      <h2>{feature.title}</h2>
-                      <p> {feature.description}</p>
+                  <div
+                    ref={view}
+                    className={[
+                      style.features,
+                      isVisible ? style.viwers : null,
+                    ].join("")}
+                  >
+                    <div className={style.featureItem}>
+                      <span className={style.featureIcon}>
+                        <feature.icon />
+                      </span>
+                      <div className={style.featureDescription}>
+                        <h2>{feature.title}</h2>
+                        <p> {feature.description}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -132,14 +148,22 @@ export const About = () => {
                     isVisible ? style.contentView3 : null,
                   ].join("")}
                 >
-                  <div className={style.featureItem}>
-                    <div className={style.featureDescription}>
-                      <h2>{feature.title}</h2>
-                      <p> {feature.description}</p>
+                  <div
+                    ref={view}
+                    className={[
+                      style.features,
+                      isVisible ? style.viwers : null,
+                    ].join("")}
+                  >
+                    <div className={style.featureItem}>
+                      <span className={style.featureIcon}>
+                        <feature.icon />
+                      </span>
+                      <div className={style.featureDescription}>
+                        <h2>{feature.title}</h2>
+                        <p> {feature.description}</p>
+                      </div>
                     </div>
-                    <span className={style.featureIcon}>
-                      <feature.icon />
-                    </span>
                   </div>
                 </div>
               ))}
@@ -154,14 +178,22 @@ export const About = () => {
                     isVisible ? style.contentView4 : null,
                   ].join("")}
                 >
-                  <div className={style.featureItem}>
-                    <div className={style.featureDescription}>
-                      <h2>{feature.title}</h2>
-                      <p> {feature.description}</p>
+                  <div
+                    ref={view}
+                    className={[
+                      style.features,
+                      isVisible ? style.viwers : null,
+                    ].join("")}
+                  >
+                    <div className={style.featureItem}>
+                      <span className={style.featureIcon}>
+                        <feature.icon />
+                      </span>
+                      <div className={style.featureDescription}>
+                        <h2>{feature.title}</h2>
+                        <p> {feature.description}</p>
+                      </div>
                     </div>
-                    <span className={style.featureIcon}>
-                      <feature.icon />
-                    </span>
                   </div>
                 </div>
               ))}
