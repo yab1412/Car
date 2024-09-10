@@ -70,7 +70,7 @@ export const Footer = () => {
 
         <div className={style.foot}>
           <div className={style.copyright}>
-            <p>&copy; CityScape 2024. | All rights reserved.</p>
+            <p>&copy; Yenu Trading 2024. | All rights reserved.</p>
           </div>
           <div className={style.terms}>
             <p>Terms and Conditions</p>
