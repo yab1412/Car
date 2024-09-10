@@ -68,7 +68,7 @@ export const QandA = () => {
 
   return (
     <Gutter className={style.container}>
-      <div className={style.main}>
+      <div id="FAQ" className={style.main}>
         <div className={style.title}>
           <div className={style.head}>
             <h4>Do You Have</h4>

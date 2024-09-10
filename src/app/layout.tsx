@@ -28,30 +28,47 @@ export default function RootLayout({
           <Header
             menu={[
               {
-                title: "home",
+                title: "Home",
                 path: "/",
               },
               {
                 title: "About",
-                path: "/about",
+                path: "#about",
               },
               {
-                title: "Section",
+                title: "Offers",
+                path: "#offers",
+              },
+              {
+                title: "Cars",
+                path: "#cars",
+              },
+              {
+                title: "News",
+                path: "#news",
+              },
+              {
+                title: "Testimonies",
                 path: "/section",
+              },
+              {
+                title: "FAQ",
+                path: "#FAQ",
+              },
+              {
+                title: "Contacts",
+                path: "#contact us",
               },
             ]}
             logo={{
-              src: "",
+              src: "/assets/logo.jpg",
               alt: "Image",
-              width: 0,
-              height: 0,
+              width: 100,
+              height: 100,
             }}
           />
         </header>
-        <main>
-
-        {children}
-        </main>
+        <main>{children}</main>
         <footer>
           <Footer />
         </footer>

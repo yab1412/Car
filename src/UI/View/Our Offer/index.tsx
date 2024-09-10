@@ -1,13 +1,15 @@
 "use client";
 
 import { Gutter } from "@/UI/Components/Gutter";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./index.module.scss";
 import Image from "next/image";
 import Counter from "./Counter";
 
 export const Our_Offer = () => {
   const parallaxBackgroundRef = useRef<HTMLDivElement | null>(null);
+  const view = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,8 +29,28 @@ export const Our_Offer = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entery = entries[0];
+      if (entery.isIntersecting) {
+        setIsVisible(entery.isIntersecting);
+      }
+    });
+
+    const currentView = view.current;
+    if (currentView) {
+      observer.observe(currentView);
+    }
+
+    return () => {
+      if (currentView) {
+        observer.unobserve(currentView);
+      }
+    };
+  });
+
   return (
-    <div className={style.container}>
+    <div id="offers" className={style.container}>
       <div className={style.main}>
         <section className={style.parallaxSection}>
           <div
@@ -77,10 +99,42 @@ export const Our_Offer = () => {
             </div>
 
             <div className={style.counters}>
-              <Counter title="Completed Orders" maxCount={15425} />
-              <Counter title="Happy Customers" maxCount={8745} />
-              <Counter title="Vehicles Fleet" maxCount={235} />
-              <Counter title="Years" maxCount={15} />
+              <div
+                ref={view}
+                className={[
+                  style.item,
+                  isVisible ? style.contentView1 : null,
+                ].join("")}
+              >
+                <Counter title="Completed Orders" maxCount={15425} />
+              </div>
+              <div
+                ref={view}
+                className={[
+                  style.item,
+                  isVisible ? style.contentView2 : null,
+                ].join("")}
+              >
+                <Counter title="Happy Customers" maxCount={8745} />
+              </div>
+              <div
+                ref={view}
+                className={[
+                  style.item,
+                  isVisible ? style.contentView3 : null,
+                ].join("")}
+              >
+                <Counter title="Vehicles Fleet" maxCount={235} />
+              </div>
+              <div
+                ref={view}
+                className={[
+                  style.item,
+                  isVisible ? style.contentView4 : null,
+                ].join("")}
+              >
+                <Counter title="Years" maxCount={15} />
+              </div>
             </div>
           </Gutter>
         </section>

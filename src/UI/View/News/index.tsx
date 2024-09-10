@@ -62,7 +62,7 @@ export const News = () => {
   return (
     <>
       <Gutter className={style.container}>
-        <div className={style.main}>
+        <div id="news" className={style.main}>
           <div className={style.title}>
             <div className={style.head}>
               <h4>Latest From Us</h4>

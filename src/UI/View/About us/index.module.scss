@@ -63,6 +63,9 @@
 }
 
 .item {
+  // border: 1px solid red;
+  // opacity: 0;
+
 }
 
 .featureItem {
@@ -89,13 +92,8 @@
   }
 }
 
-.featureContent {
-
-}
-
 .contentView1 {
   animation: lefts 1s 0.2s linear forwards;
-
 }
 
 .contentView2 {
@@ -111,32 +109,37 @@
 }
 
 @keyframes rights {
-  from {
-    opacity: 0;
+  0% {
     transform: translateX(100%);
+    opacity: 0;
   }
-  to {
-    opacity: 1;
+  50% {
+    opacity: 0.5;
+  }
+  100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes lefts {
-  from {
+  0% {
     opacity: 0;
     transform: translateX(-100%);
   }
-  to {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-
 .contentView {
-    scale: 1;
+  scale: 1;
   animation: scales 1s 0.5s linear forwards;
-   animation-timeline: view();
+  animation-timeline: view();
   animation-range: contain;
 }
 
@@ -145,4 +148,3 @@
     scale: 0.8;
   }
 }
-

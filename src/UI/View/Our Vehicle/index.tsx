@@ -94,7 +94,7 @@ export const Our_Vehicle = () => {
 
   return (
     <Gutter className={style.container}>
-      <div className={style.main}>
+      <div id="cars" className={style.main}>
         <div className={style.title}>
           <div className={style.head}>
             <h4>Enjoy Your Ride</h4>

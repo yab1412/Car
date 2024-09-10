@@ -42,6 +42,10 @@
 .logo {
   padding: 0 10rem;
 
+  & img {
+    object-fit: cover;
+  }
+
   @include respond(phone) {
     padding: 0;
   }
@@ -181,7 +185,8 @@
 }
 
 .menus:hover {
-  background-color: #f3b52e;
+  padding: 2rem;
+  background-color: #FFEA00;
   transform: translateY(-5px);
   box-shadow: 0 -5px 0px #4e4d4d inset;
 }

@@ -6,7 +6,7 @@ import { Icons } from '@/UI/Components/Icons';
 export const Contact_Us = () => {
   return (
     <Gutter className={style.container}>
-      <div className={style.main}>
+      <div id='contact us' className={style.main}>
         <div className={style.title}>
           <div className={style.head}>
             <h4>Call us for further information</h4>

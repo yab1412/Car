@@ -41,7 +41,9 @@ export const About = () => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
       if (entry.isIntersecting) {
-        setIsVisible(entry.isIntersecting);
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
       }
     });
 
@@ -55,11 +57,11 @@ export const About = () => {
         observer.unobserve(currentView);
       }
     };
-  });
+  }, []);
 
   return (
     <Gutter className={style.container}>
-      <div className={style.main}>
+      <div id="about" className={style.main}>
         <div className={style.title}>
           <div className={style.head}>
             <h4>Why Choose Us?</h4>
@@ -68,16 +70,15 @@ export const About = () => {
         </div>
         <div className={style.content}>
           <div className={style.description}>
-            <div className={style.item}>
+            <div
+              ref={view}
+              className={[
+                style.item,
+                isVisible ? style.contentView1 : null,
+              ].join("")}
+            >
               {features.slice(0, 1).map((feature, key) => (
-                <div
-                  key={key}
-                  ref={view}
-                  className={[
-                    style.featureContent,
-                    isVisible ? style.contentView1 : null,
-                  ].join("")}
-                >
+                <div key={key}>
                   <div className={style.featureItem}>
                     <span className={style.featureIcon}>
                       <feature.icon />
@@ -90,16 +91,15 @@ export const About = () => {
                 </div>
               ))}
             </div>
-            <div className={style.item}>
+            <div
+              ref={view}
+              className={[
+                style.item,
+                isVisible ? style.contentView2 : null,
+              ].join("")}
+            >
               {features.slice(1, 2).map((feature, key) => (
-                <div
-                  key={key}
-                  ref={view}
-                  className={[
-                    style.featureContent,
-                    isVisible ? style.contentView2 : null,
-                  ].join("")}
-                >
+                <div key={key}>
                   <div className={style.featureItem}>
                     <span className={style.featureIcon}>
                       <feature.icon />
@@ -113,20 +113,22 @@ export const About = () => {
               ))}
             </div>
           </div>
-          <div ref={view} className= {[style.image, isVisible ? style.contentView : null].join('')}>
-          <Image src={"/assets/car-2.png"} alt="" width={1000} height={400} />
+          <div
+            ref={view}
+            className={[style.image, isVisible ? style.scales : null].join("")}
+          >
+            <Image src={"/assets/car-2.png"} alt="" width={1000} height={400} />
           </div>
           <div className={style.description}>
-            <div className={style.item}>
+            <div
+              ref={view}
+              className={[
+                style.item,
+                isVisible ? style.contentView3 : null,
+              ].join("")}
+            >
               {features.slice(2, 3).map((feature, key) => (
-                <div
-                  key={key}
-                  ref={view}
-                  className={[
-                    style.featureContent,
-                    isVisible ? style.contentView3 : null,
-                  ].join("")}
-                >
+                <div key={key}>
                   <div className={style.featureItem}>
                     <span className={style.featureIcon}>
                       <feature.icon />
@@ -139,16 +141,15 @@ export const About = () => {
                 </div>
               ))}
             </div>
-            <div className={style.item}>
+            <div
+              ref={view}
+              className={[
+                style.item,
+                isVisible ? style.contentView4 : null,
+              ].join("")}
+            >
               {features.slice(3, 4).map((feature, key) => (
-                <div
-                  key={key}
-                  ref={view}
-                  className={[
-                    style.featureContent,
-                    isVisible ? style.contentView4 : null,
-                  ].join("")}
-                >
+                <div key={key}>
                   <div className={style.featureItem}>
                     <span className={style.featureIcon}>
                       <feature.icon />
