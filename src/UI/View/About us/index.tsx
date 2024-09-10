@@ -113,8 +113,13 @@ export const About = () => {
               ))}
             </div>
           </div>
-          <div ref={view} className= {[style.image, isVisible ? style.contentView : null].join('')}>
-          <Image src={"/assets/car-2.png"} alt="" width={1000} height={400} />
+          <div
+            ref={view}
+            className={[style.image, isVisible ? style.contentView : null].join(
+              ""
+            )}
+          >
+            <Image src={"/assets/car-2.png"} alt="" width={1000} height={400} />
           </div>
           <div className={style.description}>
             <div className={style.item}>
@@ -128,13 +133,13 @@ export const About = () => {
                   ].join("")}
                 >
                   <div className={style.featureItem}>
-                    <span className={style.featureIcon}>
-                      <feature.icon />
-                    </span>
                     <div className={style.featureDescription}>
                       <h2>{feature.title}</h2>
                       <p> {feature.description}</p>
                     </div>
+                    <span className={style.featureIcon}>
+                      <feature.icon />
+                    </span>
                   </div>
                 </div>
               ))}
@@ -150,13 +155,13 @@ export const About = () => {
                   ].join("")}
                 >
                   <div className={style.featureItem}>
-                    <span className={style.featureIcon}>
-                      <feature.icon />
-                    </span>
                     <div className={style.featureDescription}>
                       <h2>{feature.title}</h2>
                       <p> {feature.description}</p>
                     </div>
+                    <span className={style.featureIcon}>
+                      <feature.icon />
+                    </span>
                   </div>
                 </div>
               ))}
