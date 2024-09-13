@@ -49,7 +49,7 @@
     margin: 0;
   }
 
-    @include respond(tab-port) {
+  @include respond(tab-port) {
     flex-direction: column;
     align-items: center;
     gap: 15rem;
@@ -67,11 +67,11 @@
 
   & img {
     border-radius: 1rem;
+    object-fit: cover;
 
-    @include respond (phone) {
+    @include respond(phone) {
       width: 100%;
       height: 100%;
-      object-fit: cover;
     }
   }
 }
