@@ -44,6 +44,10 @@
 
   & img {
     object-fit: cover;
+
+    @include respond(phone) {
+      height: 50px;
+    }
   }
 
   @include respond(phone) {
@@ -186,7 +190,7 @@
 
 .menus:hover {
   padding: 2rem;
-  background-color: #FFEA00;
+  background-color: #ffea00;
   transform: translateY(-5px);
   box-shadow: 0 -5px 0px #4e4d4d inset;
 }

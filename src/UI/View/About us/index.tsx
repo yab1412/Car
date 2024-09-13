@@ -64,6 +64,11 @@ export const About = () => {
           <div className={style.head}>
             <h4>Why Choose Us?</h4>
             <h1>Our Features</h1>
+            <p>
+              Discover a world of convenience, safety, and customization, paving
+              the way for unforgettable adventures and seamless mobility
+              solutions.
+            </p>
           </div>
         </div>
         <div className={style.content}>

@@ -46,6 +46,10 @@
   background-attachment: scroll;
   transform: translateZ(0) scale(1);
   filter: brightness(0.5);
+
+    @include respond(phone) {
+    background-size: 155%;
+  }
 }
 
 .general {

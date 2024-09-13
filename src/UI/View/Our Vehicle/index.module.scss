@@ -49,14 +49,13 @@
   flex-wrap: nowrap;
   transition: transform 0.5s ease-in-out;
   cursor:grab ;
-  width: 1000000px;
 }
 
 .card {
   flex-shrink: 0;
   width: 400px;
   height: 500px;
-  margin: 10px;
+  margin: 0.5rem;
   border-radius: 1rem;
 
   // color: #fff;

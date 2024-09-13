@@ -44,7 +44,7 @@
   filter: brightness(0.5);
 
   @include respond(phone) {
-    background-size: auto;
+    background-size: 200%;
   }
 
   @include respond(tab-port) {
