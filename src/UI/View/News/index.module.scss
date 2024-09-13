@@ -37,6 +37,7 @@
 .news {
   margin: 2rem;
   display: flex;
+  justify-content: space-between;
   gap: 2rem;
   position: relative;
 
@@ -58,7 +59,7 @@
 }
 
 .item {
-  flex: 1;
+  display: flex;
 }
 
 .image {

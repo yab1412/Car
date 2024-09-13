@@ -12,7 +12,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @include respond (phone) {
+  @include respond(phone) {
     padding: 5rem 0;
   }
 }
@@ -27,8 +27,8 @@
 
   & h4 {
     font-size: 1.4rem;
-    color: rgba(0, 68, 255, 0.651);
-    background-color: rgb(128, 128, 128, 0.6);
+    color: #FFEA00;
+    background-color: rgba(0, 68, 255, 0.651);
     padding: 1rem;
     border-radius: 5%;
     width: fit-content;
@@ -40,29 +40,29 @@
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 
-    & h2 {
-        font-size: 1.4rem;
-        letter-spacing: 0.5rem;
-    }
+  & h2 {
+    font-size: 1.4rem;
+    letter-spacing: 0.5rem;
+  }
 
-    & h1 {
-        font-size: 2.4rem;
-        font-weight: 600;
-    }
+  & h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
 
-    & button {
-        padding: 1rem 2rem;
-        border: none;
-        background-color: rgba(0, 68, 255, 0.651);
-        color: #fff;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
-    }
+  & button {
+    padding: 1rem 2rem;
+    border: none;
+    background-color: rgba(0, 68, 255, 0.651);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
 }
