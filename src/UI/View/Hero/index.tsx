@@ -108,15 +108,13 @@ export const Hero = () => {
                     <div className={style.field}>
                       <label htmlFor="date">Pickup Date & Time</label>
                       <div className={style.inputs}>
-                        <input type="date" placeholder="YYYY-MM-DD" />
-                        <input type="time" placeholder="HH:MM" />
+                        <input type="datetime-local" />
                       </div>
                     </div>
                     <div className={style.field}>
                       <label htmlFor="time">Return Date & Time</label>
                       <div className={style.inputs}>
-                        <input type="date" placeholder="YYYY-MM-DD" />
-                        <input type="time" placeholder="HH:MM" />
+                        <input type="datetime-local" />
                       </div>
                     </div>
                   </div>
@@ -131,19 +129,19 @@ export const Hero = () => {
 
         <Gutter>
           <div className={style.descriptions}>
-              {descriptions.map((item, index) => (
-                <div key={index} className={style.description}>
-                  <div className={style.title}>
-                    <h3>{item.number}</h3>
-                    <div className={style.line}></div>
-                  </div>
-                  <div className={style.ContentDiscription}>
-                    <h2>{item.title}</h2>
-                    <p>{item.description}</p>
-                  </div>
+            {descriptions.map((item, index) => (
+              <div key={index} className={style.description}>
+                <div className={style.title}>
+                  <h3>{item.number}</h3>
+                  <div className={style.line}></div>
                 </div>
-              ))}
-            </div>
+                <div className={style.ContentDiscription}>
+                  <h2>{item.title}</h2>
+                  <p>{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </Gutter>
       </div>
     </div>

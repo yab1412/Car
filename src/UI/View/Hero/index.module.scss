@@ -197,6 +197,10 @@
   display: flex;
   gap: 2rem;
   justify-content: space-between;
+
+  @include respond (phone) {
+    flex-direction: column;
+  }
 }
 
 .submit {
